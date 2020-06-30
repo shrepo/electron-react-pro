@@ -13,6 +13,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="./src/index.tsx"></script>
+    <!-- type="module" is added for differential serving by parcel, This results in faster load time. We don't need to support older browsers as we will run only in Electron.  -->
+    <script type="module" src="./src/index.tsx"></script>
   </body>
 </html>
