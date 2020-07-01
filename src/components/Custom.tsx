@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { myTime, fbTime } from "vazpack";
 import path from "path";
-import fs from "fs";
+// import fs from "fs";
 
 const { remote, ipcRenderer } = window.require("electron");
 // const ipcRenderer = require("ipcRenderer");
 // const remote = require("remote");
 const app = remote.app;
+const fs = remote.require("fs");
 
 export const getDBDir = (dbname: string, dbfile: string) => {
   const dirPath = path.join(app.getPath("userData"), "db", dbname);
@@ -18,7 +19,7 @@ export const getDBDir = (dbname: string, dbfile: string) => {
 
 function Custom() {
   const [count, setCount] = useState(1);
-  // const [dbpath, setDBPath] = useState(getDBDir("sdsd", "data.db"));
+  const [dbpath, setDBPath] = useState(getDBDir("sdsd", "data.db"));
 
   return (
     <div className="ui container">
@@ -40,7 +41,7 @@ function Custom() {
         </span>{" "}
         = Awesllmkmk nice manda lll! 🎉
       </h3>
-      {/* <h2>dbpath: {dbpath}</h2> */}
+      <h2>dbpath: {dbpath}</h2>
       <h1>Counts : {count} </h1>
       <button
         onClick={() => {

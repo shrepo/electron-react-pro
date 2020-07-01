@@ -53,10 +53,15 @@
     "electron-react-parcel",
     "electron react parcel"
   ],
+  "peerDependencies": {
+  },
   "dependencies": {
+    "sqlite3": "^4.2.0",
+
     "electron-is-dev": "1.2.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "@firestore-sqlite-sync/core": "^0.1.14"
   },
   "build": {
     "appId": "io.githubvazra.electron",
@@ -80,6 +85,13 @@
   },
   "homepage": "./",
   "devDependencies": {
+    "faker": "^4.1.0",
+    "@types/faker": "^4.1.12",
+    "bootstrap": "^4.5.0",
+    "react-bootstrap-table-next": "^4.0.3",
+    "react-bootstrap-table2-paginator": "^2.1.2",
+    "react-bootstrap-table2-editor": "^1.4.0",
+    "react-bootstrap": "^1.0.1",
     "@babel/core": "^7.10.3",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.10.3",
