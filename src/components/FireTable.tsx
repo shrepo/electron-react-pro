@@ -68,8 +68,11 @@ export function FireTable({ collection }: IFireTable) {
       var newItemList: IDoc[] = [];
       querySnapshot.forEach(function (doc) {
         const itemDoc = dataFromSnapshot(doc); //{ id: doc.id, ...doc.data() };
+        console.log(itemDoc);
         if (itemDoc?.ut) itemDoc.ut = itemDoc.ut.toDate().toString();
         if (itemDoc?.ct) itemDoc.ct = itemDoc.ct.toDate().toString();
+        if (itemDoc?.updatedTime)
+          itemDoc.updatedTime = itemDoc.updatedTime.toDate().toString();
         itemDoc && newItemList.push(itemDoc);
       });
       setItems(newItemList);
